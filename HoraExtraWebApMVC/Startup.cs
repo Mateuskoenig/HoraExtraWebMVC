@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using HoraExtraWebApMVC.Data;
+using HoraExtraWebApMVC.Services;
 
 namespace HoraExtraWebApMVC
 {
@@ -41,7 +42,7 @@ namespace HoraExtraWebApMVC
                     builder.MigrationsAssembly("HoraExtraWebApMVC")));
 
 
-            //.UseSqlServer(Configuration.GetConnectionString("HoraExtraWebApMVCContext")));
+            services.AddScoped<FuncionarioService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
