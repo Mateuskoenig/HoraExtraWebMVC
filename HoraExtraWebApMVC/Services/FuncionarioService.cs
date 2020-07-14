@@ -16,10 +16,17 @@ namespace HoraExtraWebApMVC.Services
         {
             _context = context;
         }
-        public List <Funcionario> FindAll()
+        public List<Funcionario> FindAll()
         {
             return _context.Funcionarios.ToList();
         }
+
+        public void Insert (Funcionario obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
+
 
     }
 }
