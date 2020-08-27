@@ -17,7 +17,7 @@ namespace HoraExtraWebApMVC.Models
             public string Decricao { get; set; }
             public DateTime DiaDaHoraExtra { get; set; }
             public Departamento.Departamento Departamento { get; set; }
-            public ICollection<HorasExtra> HorasExtra { get; set; } = new List<HorasExtra>();
+            public ICollection<HorasExtras> HorasExtras { get; set; } = new List<HorasExtras>();
 
         public Funcionario() 
         {
@@ -34,19 +34,16 @@ namespace HoraExtraWebApMVC.Models
         }
 
 
-        public void AddHoraExtra(HorasExtra hr)
+        public void AddHoraExtra(HorasExtras hr)
         {
-            HorasExtra.Add(hr);
+            HorasExtras.Add(hr);
         }
 
-        public void RemoveHoraExtra(HorasExtra hr)
+        public void RemoveHoraExtra(HorasExtras hr)
         {
-            HorasExtra.Remove(hr);
+            HorasExtras.Remove(hr);
         }
 
-        public double TotalHorasExtra(DateTime Inicial, DateTime Final)
-        {
-            return HorasExtra.Where(hr => hr.DataDaHora >= Inicial && hr.DataDaHora <= Final).Sum(hr => hr.Amount);
-        }
+
     }
 }

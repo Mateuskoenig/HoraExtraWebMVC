@@ -16,6 +16,6 @@ namespace HoraExtraWebApMVC.Data
 
         public DbSet<HoraExtraWebApMVC.Models.Departamento.Departamento> Departamento { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
-        public DbSet<HorasExtra> HorasExtra { get; set; }
+        public DbSet<HorasExtras> HorasExtras { get; set; }
     }
 }

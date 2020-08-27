@@ -31,11 +31,7 @@ namespace HoraExtraWebApMVC.Models.Departamento
 
         }
 
-        public double  TotalHoraExtra(DateTime Inicial, DateTime Final) 
-        {
-            return Funcionarios.Sum(func => func.TotalHorasExtra(Inicial, Final));
-        }
-    
+  
     }
 
 }

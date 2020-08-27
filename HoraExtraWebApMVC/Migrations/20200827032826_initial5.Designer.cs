@@ -3,14 +3,16 @@ using System;
 using HoraExtraWebApMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HoraExtraWebApMVC.Migrations
 {
     [DbContext(typeof(HoraExtraWebApMVCContext))]
-    partial class HoraExtraWebApMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20200827032826_initial5")]
+    partial class initial5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
