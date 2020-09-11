@@ -44,7 +44,7 @@ namespace HoraExtraWebApMVC.Controllers
         }
 
         // GET: HorasExtras/Create
-        public IActionResult Create()
+        public IActionResult Novo()
         {
             return View();
         }
@@ -54,7 +54,7 @@ namespace HoraExtraWebApMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Departamento,Descricao,Matricula,Data,Periodo,Transporte,Horas")] HorasExtras horasExtras)
+        public async Task<IActionResult> Novo([Bind("Id,Departamento,Descricao,Matricula,Data,Periodo,Transporte,Horas")] HorasExtras horasExtras)
         {
             if (ModelState.IsValid)
             {
